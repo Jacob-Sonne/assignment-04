@@ -11,10 +11,6 @@ public class UserRepository : IUserRepository
 
     public (Response Response, int UserId) Create(UserCreateDTO user)
     {
-        var dub = _context.Users.Find(user);
-
-        if (dub != null) return (Response.Conflict, dub.Id);
-
         var entity = new User(user.Name, user.Email);
         
         _context.Users.Add(entity);
@@ -26,7 +22,7 @@ public class UserRepository : IUserRepository
     {
         var entity = _context.Users.Find(userId);
 
-        if (entity.Items != null || entity.Items.Count != 0 && !force) return Response.Conflict;
+        if (!force) return Response.Conflict;
         if (entity == null) return Response.NotFound;
 
         _context.Users.Remove(entity);
@@ -50,7 +46,7 @@ public class UserRepository : IUserRepository
 
     public Response Update(UserUpdateDTO user)
     {
-        var entity = _context.Users.Find(user);
+        var entity = _context.Users.Find(user.Id);
 
         if (entity == null) return Response.NotFound;
 

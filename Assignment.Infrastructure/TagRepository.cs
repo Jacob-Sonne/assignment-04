@@ -22,7 +22,7 @@ public class TagRepository : ITagRepository
     {
         var entity = _context.Tags.Find(tagId);
 
-        if (entity.WorkItems != null || entity.WorkItems.Count != 0 && !force) return Response.Conflict;
+        if (!force) return Response.Conflict;
         if (entity == null) return Response.NotFound;
 
         _context.Tags.Remove(entity);
@@ -47,8 +47,7 @@ public class TagRepository : ITagRepository
 
     public Response Update(TagUpdateDTO tag)
     {
-
-        var entity = _context.Users.Find(tag);
+        var entity = _context.Tags.Find(tag.Id);
 
         if (entity == null) return Response.NotFound;
 

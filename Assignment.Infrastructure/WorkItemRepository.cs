@@ -10,11 +10,7 @@ public class WorkItemRepository : IWorkItemRepository
     }
 
     public (Response Response, int ItemId) Create(WorkItemCreateDTO item)
-    {   
-        var dub = _context.Items.Find(item);
-
-        if (dub != null) return (Response.Conflict, dub.Id);
-        
+    {         
         var entity = new WorkItem(item.Title);
         entity.State = State.New;
 

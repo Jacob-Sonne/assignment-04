@@ -45,12 +45,90 @@ public class TagRepositoryTests : IDisposable
     public void tag_delete_method_test()
     {
         // Assert
-        var tag3 = new TagCreateDTO("tag3");
 
         // Act
-        var actual = _repository.Delete(1);
+        var actual = _repository.Delete(1, true);
 
         // Arrange
         actual.Should().Be((Response.Deleted));
+    }
+
+    [Fact]
+    public void tag_delete_method_notFound_and_conflict_test()
+    {
+        // Assert
+
+        // Act
+        var actual = _repository.Delete(1, false);
+        var actual2 = _repository.Delete(10, true);
+
+
+        // Arrange
+        actual.Should().Be((Response.Conflict));
+        actual2.Should().Be((Response.NotFound));
+    }
+
+    [Fact]
+    public void tag_find_method_test()
+    {
+        // Assert
+        var expected = new TagDTO(1, "tag0");
+
+        // Act
+        var actual = _repository.Find(1);
+
+        // Arrange
+        actual.Should().Be(expected);
+    }
+
+    [Fact]
+    public void tag_find_method_notFound_test()
+    {
+        // Assert
+
+        // Act
+        var actual = _repository.Find(10);
+
+        // Arrange
+        actual.Should().Be(null);
+    }
+
+    [Fact]
+    public void tag_read_method_test()
+    {
+        // Assert  
+        var expected = new[] { new TagDTO(1, "tag0"), new TagDTO(2, "tag1") };
+
+        // Act
+        var actual = _repository.Read();
+
+        // Arrange
+        actual.Should().BeEquivalentTo(expected);
+    }
+
+    [Fact]
+    public void tag_update_method_test()
+    {
+        // Assert
+        var update = new TagUpdateDTO(1, "tag10");
+
+        // Act
+        var actual = _repository.Update(update);
+
+        // Arrange
+        actual.Should().Be(Response.Updated);
+    }
+
+    [Fact]
+    public void tag_update_method_test_notFound()
+    {
+        // Assert
+        var update = new TagUpdateDTO(15, "tag999");
+
+        // Act
+        var actual = _repository.Update(update);
+
+        // Arrange
+        actual.Should().Be(Response.NotFound);
     }
 }
