@@ -54,7 +54,7 @@ public class WorkItemRepositoryTests : IDisposable
         actual.Should().Be((Response.Deleted));
     }
 
-    [Fact]
+    /*[Fact]
     public void workitem_find_method_test()
     {
         // Assert
@@ -73,5 +73,5 @@ public class WorkItemRepositoryTests : IDisposable
         actual.Tags.Should().BeEmpty();
         actual.State.Should().Be(expected.State);
         actual.StateUpdated.Should().BeCloseTo(expected.StateUpdated, precision: TimeSpan.FromSeconds(5));
-    }
+    }*/
 }
