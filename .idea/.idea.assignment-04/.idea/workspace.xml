@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a79b8d9-ac8c-402a-a607-a08616cddbdc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/Assignment.Infrastructure.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/Assignment.Infrastructure.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/TagRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/TagRepositoryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/UserRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/UserRepositoryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/Usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/Usings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/WorkItemRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure.Tests/WorkItemRepositoryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure/TagRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure/TagRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment.Infrastructure/WorkItemRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Infrastructure/WorkItemRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +27,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -60,13 +54,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="8a79b8d9-ac8c-402a-a607-a08616cddbdc" name="Changes" comment="" />
       <created>1665058044891</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665058044891</updated>
       <workItem from="1665058051695" duration="16000" />
+      <workItem from="1665058203392" duration="107000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
